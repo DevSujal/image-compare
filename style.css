@@ -1,0 +1,77 @@
+* {
+margin : 0;
+padding : 0;
+box-sizing : border-box;
+}
+
+html, body{
+width : 100%;
+height : 100%;
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.upload {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background: purple;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+#myinput{
+    width: 100%;
+    height: 30px;
+    background: blue;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;    
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+#imagecontainer{
+    display : flex;
+    gap : 30px;
+}
+
+#button {
+    display: none;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    background: rgb(232, 219, 219);
+    border-radius: 50%;
+    border: none;
+}
+
+@media screen and (max-width : 600px) {
+    .container {
+        top: 50%;
+    }
+    #imagecontainer {
+        flex-direction: column;
+    }
+}
+

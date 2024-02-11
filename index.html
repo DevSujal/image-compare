@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+
+        <div id="imagecontainer">
+          <img id="image1" src="" alt="">
+          <img id = "image2" src="" alt="">
+        </div>
+        <label class="upload" id="upload">Upload your Image
+            <input id="myinput" type="file" onchange="encode();" />
+        </label>
+
+        <button class="upload" id="button" onclick="search()" style="background: red; border: none;">Search</button>
+        <div>
+            <h1 id="ans"></h1>
+        </div>
+        <script src="script.js"></script>
+    </div>
+  </body>
+</html>
