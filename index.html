@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Images</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="website icon" href="download.png" type="png">
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
   </head>
   <body>
     <div class="container">
-        <div id="imagecontainer">
-          <img id="image1" src="" alt="">
-          <img id = "image2" src="" alt="">
-        </div>
-        <label class="upload" id="upload">Upload your Image
-            <input id="myinput" type="file" onchange="encode();" />
-        </label>
+      <div id="imagecontainer">
+        <img id="image1" src="" alt="" />
+        <img id="image2" src="" alt="" />
+      </div>
+      <label class="upload" id="upload"
+        >Upload your Image
+        <input id="myinput" type="file" onchange="encode();" />
+      </label>
 
-        <button class="upload" id="button" onclick="search()" style="background: red; border: none;">Search</button>
-        <div>
-            <h1 id="ans"></h1>
-        </div>
-        <script src="script.js"></script>
+      <button
+        class="upload"
+        id="button"
+        onclick="search()"
+        style="background: red; border: none"
+      >
+        Search
+      </button>
+      <div>
+        <h1 id="ans"></h1>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

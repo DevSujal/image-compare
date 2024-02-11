@@ -68,10 +68,15 @@ img{
 
 @media screen and (max-width : 600px) {
     .container {
+        width: 100% !important;
         top: 50%;
     }
     #imagecontainer {
         flex-direction: column;
+    }
+    img {
+        height: 250px;
+        width: 250px;
     }
 }
 
