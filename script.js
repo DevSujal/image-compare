@@ -87,9 +87,9 @@ function getLcsValue(c, m, n) {
 function search() {
   image1 = document.getElementById("image1").src;
   image2 = document.getElementById("image2").src;
-  reduce_image_file_size(image1, 20, 20).then((reduce_file) => {
+  reduce_image_file_size(image1, 10, 10).then((reduce_file) => {
     image1 = reduce_file
-    reduce_image_file_size(image2, 20, 20).then((reduce_file) => {
+    reduce_image_file_size(image2, 10, 10).then((reduce_file) => {
       image2 = reduce_file
       image1 = image1.split(",")[1];
       image2 = image2.split(",")[1];
