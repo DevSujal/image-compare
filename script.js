@@ -30,7 +30,7 @@ async function reduce_image_file_size(base64Str, newwidth, newheight) {
       canvas.height = img.height;
       let ctx = canvas.getContext("2d");
       ctx.drawImage(img, 0, 0, newwidth, newheight);
-      resolve(canvas.toDataURL("image/jpeg", 0)); // this will return base64 image results after resize
+      resolve(canvas.toDataURL("image/webp", 100)); // this will return base64 image results after resize
     };
   });
   return resized_base64;
@@ -85,21 +85,22 @@ function getLcsValue(c, m, n) {
 }
 
 function search() {
+  let text = document.getElementById("ans")
+  text.innerText = "Comparing...\n"
   image1 = document.getElementById("image1").src;
   image2 = document.getElementById("image2").src;
+  console.log(image1.length, image2.length);
+
   reduce_image_file_size(image1, 10, 10).then((reduce_file) => {
     image1 = reduce_file
     reduce_image_file_size(image2, 10, 10).then((reduce_file) => {
       image2 = reduce_file
       image1 = image1.split(",")[1];
       image2 = image2.split(",")[1];
-      // console.log(image1+"\n"+image2);
       lcsvalue = lcs(image1, image2);
     
       let maxlength = Math.max(image1.length, image2.length);
-      document.getElementById(
-        "ans"
-      ).innerText = `The Above Two Images Are matching ${(
+      text.innerText = `The Above Two Images Are matching ${(
         (lcsvalue.lcsval / maxlength) *
         100
       ).toFixed(2)} %`;
