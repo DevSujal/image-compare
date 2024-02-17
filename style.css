@@ -50,7 +50,7 @@ height : 100%;
 
 #imagecontainer{
     display : flex;
-    gap : 30px;
+    gap : 60px;
 }
 
 #button {
@@ -64,6 +64,10 @@ img{
     background: rgb(232, 219, 219);
     border-radius: 50%;
     border: none;
+}
+
+#text {
+    text-align: center;
 }
 
 
